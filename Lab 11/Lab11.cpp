@@ -1,12 +1,13 @@
-/*
-• Lab11.cpp	(main	function):
-o Create	an	empty	MyString	object
-o Get	user	input	for	MyString	using	overloaded	>>
-o Set	the	first	character	to	'B'	using	overloaded	[]
-o Print	result	using	overloaded	<<
-*/
+#include "MyString.h"
+#include <iostream>
+#include <cstdio>
+using namespace std;
 
 int main()
 {
-
+	MyString s;
+	cout << "Enter a string: ";
+	cin >> s;
+	s.operator[](0) = 'B';
+	cout << s << endl;
 }

@@ -1,9 +1,21 @@
-/*
-• Write	MyString	class	(MyString.h	and	MyString.cpp)	with:
-o Instance	variable:	array	of	100	characters	//Assume	you
-won't	go	past	100	characters*
+#include "MyString.h"
+#include <iostream>
+#include <cstdio>
+using namespace std;
 
-o Overload	[]	to	access/modify	characters.
+char&  MyString::operator[] (int i)
+{
+	if (i == 0) return str[0];
+}
 
-o Overload	<<	and	>>
-*/
+ostream& operator<<(ostream& out, const MyString& st)
+{
+	out << st.str;
+	return out;
+}
+
+istream& operator >> (istream& in, MyString& st)
+{
+	in >> st.str;
+	return in;
+}
